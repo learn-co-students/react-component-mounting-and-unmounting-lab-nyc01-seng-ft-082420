@@ -80,6 +80,14 @@ class Pancake extends React.Component {
       </div>
     );
   }
+
+  componentDidMount(){
+    this.startInterval()
+  }
+
+  componentWillUnmount(){
+    clearInterval(this.interval)
+  }
 }
 
 export default Pancake;
